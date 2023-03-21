@@ -16,11 +16,11 @@ export class CarApiService {
   getCarDetails():Observable<ICar> {
 
     return this._http.get<ICar>(this._siteURL)
-    .pipe(
-      tap(data => console.log('car data/error' + JSON.stringify(data))
-    ),
-    catchError(this.handleError)
-    );
+    // .pipe(
+    //   tap(data => console.log('car data/error' + JSON.stringify(data))
+    // ),
+    // catchError(this.handleError)
+    // );
   }
 
 
@@ -29,7 +29,7 @@ export class CarApiService {
    .pipe(
     tap(data => console.log('add car message/error' + JSON.stringify(data))
     ),
-    catchError(this.handleError)
+    //catchError(this.handleError)
     );
    }
 
@@ -40,13 +40,13 @@ export class CarApiService {
     .pipe(
       tap(data => console.log('del car message/error' + JSON.stringify(data))
     ),
-    catchError(this.handleError)
+    //catchError(this.handleError)
     );
  
   }
 
-  private handleError (err:HttpErrorResponse) {
-    console.log('CarApiService: ' + err.message);
-    return Observable.throw(err.message);
-  }
+  // private handleError (err:HttpErrorResponse) {
+  //   console.log('CarApiService: ' + err.message);
+  //   //return Observable.throw(err.message);
+  // }
 }
