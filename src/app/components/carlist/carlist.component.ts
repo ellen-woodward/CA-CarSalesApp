@@ -1,13 +1,14 @@
 import { Component } from '@angular/core';
 import { ICar, NewCar } from 'src/app/interfaces/cars';
 import { CarApiService } from 'src/app/services/car-api.service';
+import { OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-carlist',
   templateUrl: './carlist.component.html',
   styleUrls: ['./carlist.component.css']
 })
-export class CarlistComponent {
+export class CarlistComponent implements OnInit{
 
   carsData!: ICar;
 
