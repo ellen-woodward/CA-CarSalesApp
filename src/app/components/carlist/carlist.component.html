@@ -1,9 +1,8 @@
 <div class='container mt-3 mb-3'>
-
+  <button (click)="show = !show">{{show ? 'Hide' : 'Add a Car'}}</button>
   
-    <div>
+    <div *ngIf="show">
       <form>
-
         <label>ID</label>
         <input type="text" name="id" placeholder="Enter ID" #id>
 

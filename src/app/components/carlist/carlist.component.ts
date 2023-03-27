@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { ICar, NewCar } from 'src/app/interfaces/cars';
 import { CarApiService } from 'src/app/services/car-api.service';
 import { OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-carlist',
@@ -10,7 +11,8 @@ import { OnInit } from '@angular/core';
 })
 export class CarlistComponent implements OnInit{
 
-  carsData!: ICar;
+  carsData !: ICar;
+  show !: Boolean;
 
   constructor(private _carAPIService:CarApiService){}
 
@@ -18,7 +20,7 @@ export class CarlistComponent implements OnInit{
     this.getCars()
   }
 
-  getCars() {
+  getCars(){
     this._carAPIService.getCarDetails().subscribe(carsData =>
       { this.carsData = carsData
     });
