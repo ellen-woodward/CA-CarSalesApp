@@ -1,6 +1,8 @@
 import { Component, Input } from '@angular/core';
 import { ICar } from 'src/app/interfaces/cars';
 import { CarApiService } from 'src/app/services/car-api.service';
+import { Output } from '@angular/core';
+import { EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-car',
@@ -8,6 +10,8 @@ import { CarApiService } from 'src/app/services/car-api.service';
   styleUrls: ['./car.component.css']
 })
 export class CarComponent {
+  @Output() carDeletedEvent = new EventEmitter<string>()
+  
   @Input()
   carData!: ICar;
 
@@ -20,5 +24,6 @@ export class CarComponent {
       { 
         console.log(result);
       });
+      this.carDeletedEvent.emit("Car got deleted");
   }
 }

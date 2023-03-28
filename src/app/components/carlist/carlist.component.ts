@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, NgIterable } from '@angular/core';
 import { ICar, NewCar } from 'src/app/interfaces/cars';
 import { CarApiService } from 'src/app/services/car-api.service';
 import { OnInit } from '@angular/core';
@@ -32,9 +32,12 @@ export class CarlistComponent implements OnInit{
     this._carAPIService.addCarDetails(addCar).subscribe(carsData =>
       { this.carsData = carsData}
     );
-
+    this.getCars();  
     return false;
   }
 
+  refreshCars(){
+    this.getCars();
+  }
 
 }
