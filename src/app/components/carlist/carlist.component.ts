@@ -11,7 +11,7 @@ import { Observable } from 'rxjs';
 })
 export class CarlistComponent implements OnInit{
 
-  carsData !: ICar;
+  carsData : ICar | any;
   show !: Boolean;
 
   constructor(private _carAPIService:CarApiService){}
