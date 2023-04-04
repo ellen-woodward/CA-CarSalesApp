@@ -3,8 +3,8 @@
   
     <div *ngIf="show">
       <form>
-        <label>ID</label>
-        <input type="text" name="id" placeholder="Enter ID" #id>
+        <!-- <label>ID</label>
+        <input type="text" name="id" placeholder="Enter ID" #id> -->
 
         <label>Make</label>
         <input type="text" name="make" placeholder="Enter Make" #make>
@@ -18,7 +18,7 @@
         <label>Image</label>
         <input type="text" name="imageURL" placeholder="Enter Link to Image" #imageUrl>
   
-        <button class="btn btn-primary" type="submit" (click)="addCar(id.value, make.value, 
+        <button class="btn btn-primary" type="submit" (click)="addCar(make.value, 
                   model.value,year.value,imageUrl.value)">Add Car</button>
       </form>
     </div>

@@ -26,9 +26,9 @@ export class CarlistComponent implements OnInit{
     });
   }
 
-  addCar(id:string, make:string, model:string, year:string,imageUrl:string):boolean {
+  addCar(make:string, model:string, year:string,imageUrl:string):boolean {
     let addCar:ICar;
-    addCar=new NewCar(id,make,model,year,imageUrl);
+    addCar=new NewCar(make,model,year,imageUrl);
     this._carAPIService.addCarDetails(addCar).subscribe(carsData =>
       { this.carsData = carsData}
     );

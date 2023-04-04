@@ -7,14 +7,14 @@ export interface ICar{
 }
 
 export class NewCar implements ICar{
-    _id:string;
+    _id!:string;
     make:string;
     model:string;
     year:string;
     imageURL:string;
 
-    constructor(id:string, make:string, model:string, year:string, imageURL:string){
-        this._id = id;
+    constructor( make:string, model:string, year:string, imageURL:string){
+        // this._id = id;
         this.make = make;
         this.model = model;
         this.year = year;
