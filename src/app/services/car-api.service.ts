@@ -11,7 +11,7 @@ export class CarApiService {
 
   constructor(private _http:HttpClient) { }
 
-  private _siteURL = "http://34.254.170.9/cars"
+  private _siteURL = "http://54.246.164.152/cars"
 
   getCarDetails():Observable<any> {
 
