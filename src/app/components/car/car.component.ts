@@ -15,8 +15,6 @@ export class CarComponent {
   @Input()
   carData!: ICar;
 
-  carImageWidth:number = 300;
-
   constructor(private _carAPIService:CarApiService){}
 
   deleteCar(carId:string) { 

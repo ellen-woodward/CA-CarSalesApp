@@ -1,39 +1,5 @@
-
-<!-- <div class='container'>
-    <div class='row border-bottom mb-2 '>
-        <div class="col-2">
-            {{carData.make}} 
-        </div>
-        <div class="col-2">
-            {{carData.model}}
-        </div>
-        <div class="col-2">
-            {{carData.year}}
-        </div>
-        <div class="col-4">
-                <img src="{{carData.imageURL}}" [style.width.px]='carImageWidth' />
-        </div>
-        <div class="col-2">
-            <button class="btn btn-secondary" (click)="deleteCar(carData._id)">Delete</button>
-        </div>
-    </div>
-</div> -->
-<!-- <div class="col mb-5">
-    <div class="card h-100">
-        <img class="mx-auto d-block" src="{{carData.imageURL}}" [style.width.px]='carImageWidth'/>
-        <div class="card-body p-4">
-            <div class="text-center">
-                <h5>{{carData.make}} {{carData.model}}</h5>
-                <h5>{{carData.year}}</h5>
-            </div>
-        </div>
-        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent text-center">
-            <button class="btn btn-secondary" (click)="deleteCar(carData._id)">Delete</button>
-        </div>
-    </div>
-</div> -->
-
-<div class="card" style="width: 18rem;">
+<div class="col mb-5">
+<div class="card h-100" style="width: 18rem;">
     <img src="{{carData.imageURL}}" class="card-img-top" alt="...">
     <div class="card-body text-center">
       <h5 class="card-title">{{carData.make}} {{carData.model}}</h5>
@@ -41,4 +7,5 @@
       <a href="#" class="btn btn-primary" (click)="deleteCar(carData._id)">Delete</a>
     </div>
   </div>
+</div>
 

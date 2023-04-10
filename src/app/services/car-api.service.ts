@@ -11,10 +11,9 @@ export class CarApiService {
 
   constructor(private _http:HttpClient) { }
 
-  private _siteURL = "http://54.246.164.152/cars"
+  private _siteURL = "http://34.244.249.170/cars"
 
   getCarDetails():Observable<any> {
-
     return this._http.get<ICar>(this._siteURL)
     .pipe(
       tap(data => console.log('car data/error' + JSON.stringify(data))
